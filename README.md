@@ -68,9 +68,3 @@ The model achieves a high accuracy in recognizing CAPTCHA text, demonstrating it
 ## References
 - [CRNN Paper](https://arxiv.org/abs/1507.05717)
 - [PyTorch Documentation](https://pytorch.org/docs/)
-
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
-## Acknowledgements
-Special thanks to open-source contributors and PyTorch for enabling this implementation.
