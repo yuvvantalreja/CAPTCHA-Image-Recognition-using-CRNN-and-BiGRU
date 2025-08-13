@@ -1,70 +1,30 @@
 # CAPTCHA Text Recognition using CRNN and BiGRU
 
-This project focuses on recognizing CAPTCHA text using a deep learning approach, employing Convolutional Recurrent Neural Networks (CRNN) and Bidirectional Gated Recurrent Units (BiGRU). The implementation utilizes PyTorch for model training and evaluation, and includes data preprocessing, model design, and performance analysis.
+This project focuses on recognizing CAPTCHA text using a deep learning approach, employing Convolutional Recurrent Neural Networks and Bidirectional Gated Recurrent Units. It combines a truncated ResNet‑18 visual encoder with BiGRU, a common approach for OCR in documents and images
 
-## Features
-- Preprocessing CAPTCHA images for training.
-- Training a CRNN-BiGRU-based model for text recognition.
-- Performance evaluation using metrics such as accuracy.
-- End-to-end pipeline from data preparation to prediction.
+<img width="400" height="400" alt="Screenshot 2025-08-14 at 12 14 27 AM" src="https://github.com/user-attachments/assets/f3999dcd-e716-429a-a374-981c9215d90e" />
+<img width="450" height="450" alt="Screenshot 2025-08-13 at 11 29 38 PM" src="https://github.com/user-attachments/assets/d0c8e3ac-e413-417d-b2c9-a966432893a1" />
 
-## Technologies Used
-The project uses the following Python libraries:
-- PyTorch
-- torchvision
-- numpy
-- pandas
-- matplotlib
-- sklearn
-- tqdm
-- PIL (Pillow)
 
-## Setup Instructions
-
-### Prerequisites
-- Python 3.7+
-- `pip` for installing required libraries.
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yuvvantalreja/CAPTCHA-Image-Recognition-using-CRNN-and-BiGRU.git
-   cd CAPTCHA-Image-Recognition-using-CRNN-and-BiGRU
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-### Running the Notebook
-1. Open the Jupyter notebook:
-   ```bash
-   jupyter notebook CAPTCHA_Text_Recognition.ipynb
-   ```
-2. Follow the steps in the notebook to preprocess data, train the model, and evaluate performance.
-
-## Key Functions
-The following functions are defined in the project:
-- **`weights_init`**: Initializes model weights.
-- **`encode_text_batch`**: Encodes text labels into a format suitable for the model.
-- **`compute_loss`**: Computes the loss for model optimization.
-- **`decode_predictions`**: Decodes model outputs into human-readable text.
-- **`remove_duplicates`**: Processes predictions to remove repeated characters.
-- **`correct_prediction`**: Checks for accuracy of predictions.
-- **`print_total_time`**: Outputs the total runtime of the training process.
-
-## Model Architecture
-The model consists of:
-1. A Convolutional Neural Network (CNN) for feature extraction.
-2. A Recurrent Neural Network (RNN) with BiGRU for sequence modeling.
-3. A fully connected layer for final text prediction.
+## Key Features
+- **Backbone**: `resnet18(pretrained=True)` truncated before the last 3 blocks
+- **Sequence model**: Two-layer BiGRU with hidden size 256 and residual summation after the first BiGRU
 
 ## Dataset
-The project uses a CAPTCHA dataset containing labeled images of CAPTCHA text. The dataset is split into training and testing subsets. Data augmentation techniques are applied for better generalization.
+Uses [CAPTCHA dataset] (https://www.kaggle.com/datasets/fournierp/captcha-version-2-images) containing labeled images of CAPTCHA text. The dataset is split into training and testing subsets. Data augmentation techniques are applied for better generalization.
 
 ## Results
 The model achieves a high accuracy in recognizing CAPTCHA text, demonstrating its effectiveness for real-world CAPTCHA-solving applications.
 
+## Acknowledgements
+- https://github.com/EVOL-ution/Captcha-Recognition-using-CRNN
+- https://github.com/GitYCC/crnn-pytorch
+
 ## References
 - [CRNN Paper](https://arxiv.org/abs/1507.05717)
 - [PyTorch Documentation](https://pytorch.org/docs/)
+
+## Contributions
+I'm open to any new ideas. Just open a PR!
+
+Made with ❤️ in Pittsburgh
