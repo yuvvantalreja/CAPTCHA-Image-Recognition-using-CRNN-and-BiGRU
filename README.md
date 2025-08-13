@@ -6,12 +6,14 @@ This project focuses on recognizing CAPTCHA text using a deep learning approach,
 <img width="450" height="450" alt="Screenshot 2025-08-13 at 11 29 38 PM" src="https://github.com/user-attachments/assets/d0c8e3ac-e413-417d-b2c9-a966432893a1" />
 
 
+**Checkout the [colab notebook](https://colab.research.google.com/drive/1xoJURWvjInwRa6f4TSCr7HLTsDbY3A3O#scrollTo=a5ASm2d6F8dI)!**
+
 ## Key Features
 - **Backbone**: `resnet18(pretrained=True)` truncated before the last 3 blocks
 - **Sequence model**: Two-layer BiGRU with hidden size 256 and residual summation after the first BiGRU
 
 ## Dataset
-Uses [CAPTCHA dataset] (https://www.kaggle.com/datasets/fournierp/captcha-version-2-images) containing labeled images of CAPTCHA text. The dataset is split into training and testing subsets. Data augmentation techniques are applied for better generalization.
+Uses [CAPTCHA dataset](https://www.kaggle.com/datasets/fournierp/captcha-version-2-images) containing labeled images of CAPTCHA text. The dataset is split into training and testing subsets. Data augmentation techniques are applied for better generalization.
 
 ## Results
 The model achieves a high accuracy in recognizing CAPTCHA text, demonstrating its effectiveness for real-world CAPTCHA-solving applications.
